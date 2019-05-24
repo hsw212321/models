@@ -38,7 +38,7 @@ import tensorflow as tf
 from datasets import dataset_utils
 
 # The URL where the CIFAR data can be downloaded.
-_DATA_URL = 'https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz'
+_DATA_URL = 'http://cdnfhnfile.115.com/5ce78fba4a02305a14ed4fb12cfe0669aa1e6407/cifar-10-python.tar.gz?t=1558689389&u=12168835&s=13107200&d=vip-1879974909-be8ysngl1jtjs83y2-1&c=2&f=3&k=3cce4f16839ba8fbc9d56d93d012785f'
 
 # The number of training files.
 _NUM_TRAIN_FILES = 5
@@ -127,7 +127,7 @@ def _download_and_uncompress_dataset(dataset_dir):
   Args:
     dataset_dir: The directory where the temporary files are stored.
   """
-  filename = _DATA_URL.split('/')[-1]
+  filename = 'cifar-10-python.tar.gz'
   filepath = os.path.join(dataset_dir, filename)
 
   if not os.path.exists(filepath):
@@ -148,7 +148,7 @@ def _clean_up_temporary_files(dataset_dir):
   Args:
     dataset_dir: The directory where the temporary files are stored.
   """
-  filename = _DATA_URL.split('/')[-1]
+  filename = 'cifar-10-python.tar.gz'
   filepath = os.path.join(dataset_dir, filename)
   tf.gfile.Remove(filepath)
 
